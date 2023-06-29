@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-29 22:36:09.572607",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ear_tag",
+  "shape",
+  "cattle_brand",
+  "column_break_mvofc",
+  "breed",
+  "gender",
+  "status",
+  "section_break_ikic6",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "ear_tag",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ear Tag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shape",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shape",
+   "options": "Cattle Shape"
+  },
+  {
+   "fieldname": "cattle_brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cattle Brand",
+   "options": "Cattle Brand"
+  },
+  {
+   "fieldname": "column_break_mvofc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Breed",
+   "options": "Cattle Breed"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Cattle Gender"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Approved\nRejected"
+  },
+  {
+   "fieldname": "section_break_ikic6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Comment"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-29 22:36:09.572607",
+ "modified_by": "Administrator",
+ "module": "Livestock Marketing",
+ "name": "LiveStock Loading Sheet",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
