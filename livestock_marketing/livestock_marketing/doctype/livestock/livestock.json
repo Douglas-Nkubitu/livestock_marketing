@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-29 21:17:09.164420",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "livestock_registration_section",
+  "naming_series",
+  "farmer_name",
+  "farmer_type",
+  "farmer_number",
+  "crush_name",
+  "zone",
+  "keeper_id",
+  "column_break_zsovt",
+  "posting_date",
+  "posting_time",
+  "status",
+  "business_unit",
+  "branch_code",
+  "responsibility_center",
+  "created_by",
+  "section_break_yzm6y",
+  "livestock_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "LVST-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farmer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "farmer_name.customer_categories",
+   "fieldname": "farmer_type",
+   "fieldtype": "Data",
+   "label": "Farmer Type"
+  },
+  {
+   "fetch_from": "farmer_name.farmer_id",
+   "fieldname": "farmer_number",
+   "fieldtype": "Data",
+   "label": "Farmer ID"
+  },
+  {
+   "fetch_from": "farmer_name.crush_name",
+   "fieldname": "crush_name",
+   "fieldtype": "Data",
+   "label": "Crush Name"
+  },
+  {
+   "fetch_from": "farmer_name.zone",
+   "fieldname": "zone",
+   "fieldtype": "Data",
+   "label": "Zone"
+  },
+  {
+   "fieldname": "keeper_id",
+   "fieldtype": "Data",
+   "label": "Keeper ID"
+  },
+  {
+   "fieldname": "column_break_zsovt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Posting Time",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Approved\nRejected\nCancelled"
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Data",
+   "label": "Business Unit"
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "label": "Branch Code"
+  },
+  {
+   "fieldname": "responsibility_center",
+   "fieldtype": "Data",
+   "label": "Responsibility Center"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "bold": 1,
+   "fieldname": "livestock_details",
+   "fieldtype": "Table",
+   "label": "Livestock Registration Lines",
+   "options": "Livestock Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Livestock",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_yzm6y",
+   "fieldtype": "Section Break",
+   "label": "Livestock Details"
+  },
+  {
+   "fieldname": "livestock_registration_section",
+   "fieldtype": "Section Break",
+   "label": "Livestock Registration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-29 21:47:32.272006",
+ "modified_by": "Administrator",
+ "module": "Livestock Marketing",
+ "name": "Livestock",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

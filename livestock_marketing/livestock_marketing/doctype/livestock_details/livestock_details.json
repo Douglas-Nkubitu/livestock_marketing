@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-29 21:16:34.873133",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "national_ear_tag",
+  "ear_tag",
+  "shape",
+  "column_break_7ifb0",
+  "cattle_brand",
+  "breed",
+  "gender",
+  "section_break_ikic6",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "national_ear_tag",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "National Ear Tag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ear_tag",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ear Tag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shape",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shape",
+   "options": "Cattle Shape"
+  },
+  {
+   "fieldname": "cattle_brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cattle Brand",
+   "options": "Cattle Brand"
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Breed",
+   "options": "Cattle Breed"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Cattle Gender"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_7ifb0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ikic6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-29 21:28:33.991835",
+ "modified_by": "Administrator",
+ "module": "Livestock Marketing",
+ "name": "Livestock Details",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
