@@ -16,6 +16,7 @@
   "crush_name",
   "zone",
   "keeper_id",
+  "loading_status",
   "column_break_zsovt",
   "posting_date",
   "posting_time",
@@ -154,12 +155,18 @@
    "fieldname": "livestock_registration_section",
    "fieldtype": "Section Break",
    "label": "Livestock Registration"
+  },
+  {
+   "fieldname": "loading_status",
+   "fieldtype": "Select",
+   "label": "Loading Status",
+   "options": "Yes\nNo"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-29 21:47:32.272006",
+ "modified": "2023-06-29 21:54:06.780913",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock",
