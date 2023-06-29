@@ -1,0 +1,1 @@
+livestock_marketing.patches.custom_fields.addition_of_custom_fields_in_customer
