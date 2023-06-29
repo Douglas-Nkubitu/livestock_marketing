@@ -16,6 +16,7 @@
   "permit_no",
   "crush_name",
   "zone",
+  "attach_document",
   "column_break_zsovt",
   "posting_date",
   "posting_time",
@@ -46,6 +47,7 @@
    "fieldname": "farmer_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Farmer Name",
    "options": "Customer",
    "reqd": 1
@@ -76,6 +78,8 @@
    "fetch_from": "farmer_name.zone",
    "fieldname": "zone",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Zone"
   },
   {
@@ -153,12 +157,17 @@
    "options": "Livestock Loading",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "attach_document",
+   "fieldtype": "Attach",
+   "label": "Attach Document"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-29 22:36:25.311447",
+ "modified": "2023-06-29 23:08:18.558879",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",

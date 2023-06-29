@@ -30,9 +30,9 @@ def execute():
                 "label":"Zone",
                 "fieldname":"zone",
                 "insert_after":"crush_name",
-                "fieldtype":"Link",
-                "options":"Zone",
-                "reqd": 1,
+                "fieldtype":"Data",
+                "fetch_from":"crush_name.zone",
+                "read_only": 1,
             },
             {
                 "fieldname":"member_column_break",

@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Phajm5fJh7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"QGtCadSMU3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"hyjHTi5ZS1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Registration\",\"col\":3}},{\"id\":\"DeutSfzltV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Loading\",\"col\":3}},{\"id\":\"F-0QzHdytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Kill Sheet\",\"col\":3}},{\"id\":\"NHZyHZ8ATz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MPprc7UM1V\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Report &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"xVDD5PGnSg\",\"type\":\"card\",\"data\":{\"card_name\":\"Livestock\",\"col\":4}},{\"id\":\"VzJz-fhMkb\",\"type\":\"card\",\"data\":{\"card_name\":\"Location\",\"col\":4}}]",
+ "content": "[{\"id\":\"Phajm5fJh7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"QGtCadSMU3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"hyjHTi5ZS1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Registration\",\"col\":3}},{\"id\":\"DeutSfzltV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Loading\",\"col\":3}},{\"id\":\"F-0QzHdytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Kill Sheet\",\"col\":3}},{\"id\":\"NHZyHZ8ATz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MPprc7UM1V\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Report &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"xVDD5PGnSg\",\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}},{\"id\":\"VzJz-fhMkb\",\"type\":\"card\",\"data\":{\"card_name\":\"Livestock\",\"col\":4}}]",
  "creation": "2023-06-29 15:26:36.839826",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,10 +15,30 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Livestock",
-   "link_count": 4,
+   "label": "Setting",
+   "link_count": 6,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crush Name",
+   "link_count": 0,
+   "link_to": "Crush Name",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone",
+   "link_count": 0,
+   "link_to": "Zone",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -63,17 +83,17 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Location",
-   "link_count": 2,
+   "label": "Livestock",
+   "link_count": 4,
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Crush Name",
+   "label": "Farmer Registration",
    "link_count": 0,
-   "link_to": "Crush Name",
+   "link_to": "Customer",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -81,15 +101,35 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Zone",
+   "label": "Livestock Registration",
    "link_count": 0,
-   "link_to": "Zone",
+   "link_to": "Livestock Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Loading",
+   "link_count": 0,
+   "link_to": "Livestock Loading",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Kill sheet",
+   "link_count": 0,
+   "link_to": "Kill Sheet",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-06-29 22:37:06.121505",
+ "modified": "2023-06-29 22:47:00.826699",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Marketing",

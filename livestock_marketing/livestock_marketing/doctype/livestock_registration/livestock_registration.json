@@ -42,6 +42,7 @@
    "fieldname": "farmer_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Farmer Name",
    "options": "Customer",
    "reqd": 1
@@ -50,6 +51,8 @@
    "fetch_from": "farmer_name.customer_categories",
    "fieldname": "farmer_type",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Farmer Type"
   },
   {
@@ -62,12 +65,15 @@
    "fetch_from": "farmer_name.crush_name",
    "fieldname": "crush_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Crush Name"
   },
   {
    "fetch_from": "farmer_name.zone",
    "fieldname": "zone",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Zone"
   },
   {
@@ -142,7 +148,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Livestock",
+   "options": "Livestock Registration",
    "print_hide": 1,
    "read_only": 1
   },
@@ -166,7 +172,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-29 21:54:06.780913",
+ "modified": "2023-06-29 22:51:53.511845",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",
