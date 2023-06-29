@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include livestock_marketing *.css
+recursive-include livestock_marketing *.csv
+recursive-include livestock_marketing *.html
+recursive-include livestock_marketing *.ico
+recursive-include livestock_marketing *.js
+recursive-include livestock_marketing *.json
+recursive-include livestock_marketing *.md
+recursive-include livestock_marketing *.png
+recursive-include livestock_marketing *.py
+recursive-include livestock_marketing *.svg
+recursive-include livestock_marketing *.txt
+recursive-exclude livestock_marketing *.pyc
