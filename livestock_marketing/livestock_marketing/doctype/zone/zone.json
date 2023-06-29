@@ -22,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-29 20:38:18.557968",
+ "modified": "2023-06-29 20:53:46.815091",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Zone",
@@ -44,5 +44,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
