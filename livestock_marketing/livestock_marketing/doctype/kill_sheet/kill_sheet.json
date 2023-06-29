@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-29 22:25:50.399361",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "livestock_kill_sheet_section",
+  "naming_series",
+  "livestock_loading_no",
+  "farmer_name",
+  "farmer_type",
+  "farmer_number",
+  "mobile_number",
+  "crush_name",
+  "zone",
+  "keeper_id",
+  "permit_no",
+  "column_break_zsovt",
+  "crush_amount",
+  "commission",
+  "posting_date",
+  "posting_time",
+  "status",
+  "business_unit",
+  "branch_code",
+  "responsibility_center",
+  "created_by",
+  "section_break_yzm6y",
+  "livestock_kill_sheet_lines",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "livestock_kill_sheet_section",
+   "fieldtype": "Section Break",
+   "label": "Livestock Kill Sheet"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "KILL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "livestock_loading_no",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Livestock Loading No."
+  },
+  {
+   "fieldname": "farmer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "farmer_name.customer_categories",
+   "fieldname": "farmer_type",
+   "fieldtype": "Data",
+   "label": "Farmer Type"
+  },
+  {
+   "fetch_from": "farmer_name.farmer_id",
+   "fieldname": "farmer_number",
+   "fieldtype": "Data",
+   "label": "Farmer ID"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Int",
+   "label": "Mobile Number"
+  },
+  {
+   "fetch_from": "farmer_name.crush_name",
+   "fieldname": "crush_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Crush Name"
+  },
+  {
+   "fetch_from": "farmer_name.zone",
+   "fieldname": "zone",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Zone"
+  },
+  {
+   "fieldname": "keeper_id",
+   "fieldtype": "Data",
+   "label": "Keeper ID"
+  },
+  {
+   "fieldname": "permit_no",
+   "fieldtype": "Data",
+   "label": "Permit No."
+  },
+  {
+   "fieldname": "column_break_zsovt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "crush_amount",
+   "fieldtype": "Currency",
+   "label": "Crush Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Posting Time",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClosed"
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Data",
+   "label": "Business Unit"
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "label": "Branch Code"
+  },
+  {
+   "fieldname": "responsibility_center",
+   "fieldtype": "Data",
+   "label": "Responsibility Center"
+  },
+  {
+   "default": "__user",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_yzm6y",
+   "fieldtype": "Section Break",
+   "label": "Livestock Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Kill Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "bold": 1,
+   "fieldname": "livestock_kill_sheet_lines",
+   "fieldtype": "Table",
+   "label": "Livestock Kill Sheet Lines",
+   "options": "Livestock Kill sheet",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-29 22:38:48.156585",
+ "modified_by": "Administrator",
+ "module": "Livestock Marketing",
+ "name": "Kill Sheet",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
