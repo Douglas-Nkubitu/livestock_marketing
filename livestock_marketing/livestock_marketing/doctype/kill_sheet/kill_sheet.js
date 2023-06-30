@@ -7,25 +7,28 @@ frappe.ui.form.on('Kill Sheet', {
             frm.set_value('posting_time', frappe.datetime.now_time());
         }
     },
-     //Get livestock loaded details
+    //Get livestock loaded details
     livestock_loading: function (frm) {
         if (frm.doc.livestock_loading) {
             frm.clear_table('livestock_kill_sheet');
             frappe.model.with_doc('Livestock Loading', frm.doc.livestock_loading, function () {
                 let source_doc = frappe.model.get_doc('Livestock Loading', frm.doc.livestock_loading);
                 $.each(source_doc.livestock_loading, function (index, source_row) {
-					const target_row = frm.add_child('livestock_kill_sheet');
-                    target_row.ear_tag = source_row.ear_tag;
-                    target_row.shape = source_row.shape;
-                    target_row.cattle_brand = source_row.cattle_brand;
-                    target_row.breed = source_row.breed;
-                    target_row.gender = source_row.gender;
-                    target_row.status = source_row.status;
-                    frm.refresh_field('livestock_kill_sheet');
+                    if (source_row.status === 'Accepted') {
+                        const target_row = frm.add_child('livestock_kill_sheet');
+                        target_row.ear_tag = source_row.ear_tag;
+                        target_row.shape = source_row.shape;
+                        target_row.cattle_brand = source_row.cattle_brand;
+                        target_row.breed = source_row.breed;
+                        target_row.gender = source_row.gender;
+                        target_row.status = source_row.status;
+                    }
                 });
+                frm.refresh_field('livestock_kill_sheet');
             });
         }
     },
+
     //Calculate total Amount
     validate: function (frm) {
         //Calculate Total Amount
