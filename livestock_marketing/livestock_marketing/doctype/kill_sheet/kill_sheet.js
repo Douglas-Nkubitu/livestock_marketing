@@ -8,7 +8,7 @@ frappe.ui.form.on('Kill Sheet', {
         }
     },
      //Get livestock loaded details
-     livestock_loading: function (frm) {
+    livestock_loading: function (frm) {
         if (frm.doc.livestock_loading) {
             frm.clear_table('livestock_kill_sheet');
             frappe.model.with_doc('Livestock Loading', frm.doc.livestock_loading, function () {
