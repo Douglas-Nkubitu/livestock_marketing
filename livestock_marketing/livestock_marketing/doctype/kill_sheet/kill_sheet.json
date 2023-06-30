@@ -10,15 +10,15 @@
  "field_order": [
   "livestock_kill_sheet_section",
   "naming_series",
-  "livestock_loading_no",
+  "livestock_loading",
   "farmer_name",
   "farmer_type",
   "farmer_number",
   "mobile_number",
   "crush_name",
   "zone",
-  "keeper_id",
   "permit_no",
+  "keeper_id",
   "column_break_zsovt",
   "crush_amount",
   "commission",
@@ -31,7 +31,13 @@
   "created_by",
   "owner_fullname",
   "section_break_yzm6y",
-  "livestock_kill_sheet_lines",
+  "livestock_kill_sheet",
+  "section_break_4lrts",
+  "total_qty",
+  "total_amount",
+  "grade",
+  "column_break_3lpbc",
+  "remarks",
   "amended_from"
  ],
  "fields": [
@@ -47,14 +53,6 @@
    "label": "Series",
    "options": "KILL",
    "reqd": 1
-  },
-  {
-   "fieldname": "livestock_loading_no",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Livestock Loading No."
   },
   {
    "fieldname": "farmer_name",
@@ -190,25 +188,66 @@
    "read_only": 1
   },
   {
+   "fetch_from": "created_by.full_name",
+   "fieldname": "owner_fullname",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "livestock_loading",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Livestock Loading No.",
+   "options": "Livestock Loading",
+   "reqd": 1
+  },
+  {
    "allow_bulk_edit": 1,
    "bold": 1,
-   "fieldname": "livestock_kill_sheet_lines",
+   "fieldname": "livestock_kill_sheet",
    "fieldtype": "Table",
    "label": "Livestock Kill Sheet Lines",
    "options": "Livestock Kill sheet",
    "reqd": 1
   },
   {
-   "fetch_from": "created_by.full_name",
-   "fieldname": "owner_fullname",
+   "fieldname": "section_break_4lrts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grade",
    "fieldtype": "Data",
-   "label": "Full Name"
+   "label": "Grade"
+  },
+  {
+   "fieldname": "column_break_3lpbc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-30 14:03:52.812456",
+ "modified": "2023-06-30 23:34:24.080348",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Kill Sheet",

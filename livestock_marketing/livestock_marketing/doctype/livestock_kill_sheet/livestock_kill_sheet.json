@@ -9,9 +9,12 @@
  "engine": "InnoDB",
  "field_order": [
   "ear_tag",
-  "shape",
   "cattle_brand",
+  "qty",
+  "rate",
+  "amount",
   "column_break_mvofc",
+  "shape",
   "breed",
   "gender",
   "status",
@@ -62,7 +65,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Approved\nRejected"
+   "options": "Accepted\nRejected"
   },
   {
    "fieldname": "section_break_ikic6",
@@ -73,11 +76,34 @@
    "fieldtype": "Text",
    "in_list_view": 1,
    "label": "Comment"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Carcass Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Per Kg",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency",
+   "reqd": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2023-06-29 22:30:13.281600",
+ "modified": "2023-06-30 23:22:58.764624",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill sheet",
