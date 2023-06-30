@@ -7,7 +7,7 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "agriculture",
+ "icon": "project-2",
  "idx": 0,
  "is_hidden": 0,
  "label": "Livestock Marketing",
@@ -129,7 +129,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-06-29 22:47:00.826699",
+ "modified": "2023-06-30 10:27:04.704254",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Marketing",
