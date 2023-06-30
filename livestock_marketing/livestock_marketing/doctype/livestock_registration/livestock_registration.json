@@ -25,6 +25,7 @@
   "branch_code",
   "responsibility_center",
   "created_by",
+  "owner_fullname",
   "section_break_yzm6y",
   "livestock_details",
   "amended_from"
@@ -92,6 +93,7 @@
    "in_list_view": 1,
    "label": "Posting Date",
    "no_copy": 1,
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -101,6 +103,7 @@
    "in_list_view": 1,
    "label": "Posting Time",
    "no_copy": 1,
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -167,18 +170,24 @@
    "fieldtype": "Select",
    "label": "Loading Status",
    "options": "Yes\nNo"
+  },
+  {
+   "fetch_from": "created_by.full_name",
+   "fieldname": "owner_fullname",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [
   {
-   "group": "Livestock Loading",
+   "group": "Livestock",
    "link_doctype": "Livestock Loading",
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-06-30 08:00:54.140255",
+ "modified": "2023-06-30 14:01:43.070607",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",

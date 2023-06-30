@@ -25,6 +25,7 @@
   "branch_code",
   "responsibility_center",
   "created_by",
+  "owner_fullname",
   "section_break_yzm6y",
   "livestock_loading",
   "amended_from"
@@ -93,6 +94,7 @@
    "in_list_view": 1,
    "label": "Posting Date",
    "no_copy": 1,
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -102,6 +104,7 @@
    "in_list_view": 1,
    "label": "Posting Time",
    "no_copy": 1,
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -162,6 +165,12 @@
    "fieldname": "attach_document",
    "fieldtype": "Attach",
    "label": "Attach Document"
+  },
+  {
+   "fetch_from": "created_by.full_name",
+   "fieldname": "owner_fullname",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -173,7 +182,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-06-30 08:07:52.513455",
+ "modified": "2023-06-30 14:04:33.128011",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
