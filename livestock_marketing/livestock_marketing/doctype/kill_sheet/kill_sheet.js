@@ -28,6 +28,7 @@ frappe.ui.form.on('Kill Sheet', {
     },
     //Calculate total Amount
     validate: function (frm) {
+        //Calculate Total Amount
         var totalAmount = 0;
         // Iterate over each row in the child table
         frm.doc.livestock_kill_sheet.forEach(function(row) {
@@ -36,6 +37,7 @@ frappe.ui.form.on('Kill Sheet', {
         // Set the total amount in the field
         frm.set_value('total_amount', totalAmount);
 
+        //Calculate Total Weight
         var totalWeight =0;
          // Iterate over each row in the child table
         frm.doc.livestock_kill_sheet.forEach(function(row){
