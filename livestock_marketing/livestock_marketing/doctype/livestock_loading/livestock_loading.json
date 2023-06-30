@@ -10,6 +10,7 @@
  "field_order": [
   "livestock_loading_section",
   "naming_series",
+  "livestock_registration",
   "farmer_name",
   "farmer_number",
   "keeper_id",
@@ -171,6 +172,13 @@
    "fieldname": "owner_fullname",
    "fieldtype": "Data",
    "label": "Full Name"
+  },
+  {
+   "fieldname": "livestock_registration",
+   "fieldtype": "Link",
+   "label": "Livestock Registration No.",
+   "options": "Livestock Registration",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -182,7 +190,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-06-30 14:04:33.128011",
+ "modified": "2023-06-30 21:39:30.786425",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
