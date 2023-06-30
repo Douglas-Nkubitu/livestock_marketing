@@ -166,8 +166,14 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2023-06-29 23:08:18.558879",
+ "links": [
+  {
+   "group": "Livestock Kill Sheet",
+   "link_doctype": "Kill Sheet",
+   "link_fieldname": "name"
+  }
+ ],
+ "modified": "2023-06-30 08:07:52.513455",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
