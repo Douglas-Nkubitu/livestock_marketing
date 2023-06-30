@@ -13,10 +13,10 @@
   "livestock_registration",
   "farmer_name",
   "farmer_number",
-  "keeper_id",
-  "permit_no",
   "crush_name",
   "zone",
+  "permit_no",
+  "keeper_id",
   "attach_document",
   "column_break_zsovt",
   "posting_date",
@@ -46,6 +46,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "livestock_registration.farmer_name",
    "fieldname": "farmer_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -190,7 +191,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-06-30 21:39:30.786425",
+ "modified": "2023-07-01 00:20:33.221917",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
