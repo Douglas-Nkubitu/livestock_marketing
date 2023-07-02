@@ -34,7 +34,6 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "options": "LVST-.YYYY.-",
    "reqd": 1
@@ -187,7 +186,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-06-30 14:01:43.070607",
+ "modified": "2023-07-02 22:23:13.075698",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",
@@ -195,6 +194,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -203,7 +204,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
