@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Phajm5fJh7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"QGtCadSMU3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"hyjHTi5ZS1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Registration\",\"col\":3}},{\"id\":\"DeutSfzltV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Loading\",\"col\":3}},{\"id\":\"F-0QzHdytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Kill Sheet\",\"col\":3}},{\"id\":\"NHZyHZ8ATz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MPprc7UM1V\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Report &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"VzJz-fhMkb\",\"type\":\"card\",\"data\":{\"card_name\":\"Livestock\",\"col\":4}},{\"id\":\"xVDD5PGnSg\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}}]",
+ "content": "[{\"id\":\"Phajm5fJh7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"QGtCadSMU3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"kyJoUB2qPk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Advance\",\"col\":3}},{\"id\":\"hyjHTi5ZS1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Registration\",\"col\":3}},{\"id\":\"DeutSfzltV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Loading\",\"col\":3}},{\"id\":\"F-0QzHdytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Kill Sheet\",\"col\":3}},{\"id\":\"NHZyHZ8ATz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MPprc7UM1V\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Report &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"VzJz-fhMkb\",\"type\":\"card\",\"data\":{\"card_name\":\"Livestock\",\"col\":4}},{\"id\":\"xVDD5PGnSg\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}}]",
  "creation": "2023-06-29 15:26:36.839826",
  "custom_blocks": [],
  "docstatus": 0,
@@ -129,7 +129,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-07-02 09:13:58.711561",
+ "modified": "2023-07-03 17:53:10.351046",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Marketing",
@@ -146,6 +146,13 @@
    "doc_view": "List",
    "label": "Livestock Kill Sheet",
    "link_to": "Kill Sheet",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer Advance",
+   "link_to": "Customer Advance",
    "type": "DocType"
   },
   {

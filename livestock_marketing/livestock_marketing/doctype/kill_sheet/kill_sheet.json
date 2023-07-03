@@ -49,7 +49,6 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "options": "LKS-.YYYY.-",
    "reqd": 1
@@ -249,7 +248,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-02 22:28:58.068250",
+ "modified": "2023-07-02 22:46:00.680980",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Kill Sheet",
