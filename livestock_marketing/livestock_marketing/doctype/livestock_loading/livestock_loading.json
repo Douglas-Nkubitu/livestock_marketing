@@ -187,10 +187,10 @@
   {
    "group": "Livestock Kill Sheet",
    "link_doctype": "Kill Sheet",
-   "link_fieldname": "name"
+   "link_fieldname": "livestock_loading"
   }
  ],
- "modified": "2023-07-02 22:27:16.730402",
+ "modified": "2023-07-06 23:57:18.265974",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
