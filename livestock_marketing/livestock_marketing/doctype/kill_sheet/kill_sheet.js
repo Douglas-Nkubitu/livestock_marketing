@@ -2,11 +2,38 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Kill Sheet', {
+    refresh: function(frm){
+        if (frm.doc.docstatus === 1) {
+			frm.add_custom_button(__('Payment'),
+				function () {
+					frm.events.make_payment_entry(frm);
+				}, __('Create'));
+		}
+    },
+    make_payment_entry: function(frm) {
+		let method = "livestock_marketing.overrides.customer_payment_entry.get_payment_entry_for_customer";
+	
+		return frappe.call({
+			method: method,
+			args: {
+				"dt": frm.doc.doctype,
+				"dn": frm.doc.name
+			},
+			callback: function(r) {
+				var doclist = frappe.model.sync(r.message);
+				frappe.set_route("Form", doclist[0].doctype, doclist[0].name);
+			}
+		});
+	},
+})
+
+frappe.ui.form.on('Kill Sheet', {
 	refresh: function(frm) {
         if (frm.is_new()) {
             frm.set_value('posting_time', frappe.datetime.now_time());
         }
     },
+
     //Get livestock loaded details
     livestock_loading: function (frm) {
         if (frm.doc.livestock_loading) {
