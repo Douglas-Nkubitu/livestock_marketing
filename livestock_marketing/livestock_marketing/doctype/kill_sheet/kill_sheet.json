@@ -37,6 +37,9 @@
   "remarks",
   "deduction_section",
   "deductions",
+  "total_deductions",
+  "section_break_k0ak4",
+  "total_amount_payable",
   "amended_from"
  ],
  "fields": [
@@ -244,12 +247,31 @@
    "label": "Net Amount",
    "options": "currency",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_k0ak4",
+   "fieldtype": "Section Break",
+   "label": "Total Amount Payable to Farmer"
+  },
+  {
+   "fieldname": "total_amount_payable",
+   "fieldtype": "Currency",
+   "label": "Total Amount Payable",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-08 11:31:06.948331",
+ "modified": "2023-07-08 12:49:34.629592",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Kill Sheet",
