@@ -17,27 +17,26 @@
   "mobile_number",
   "crush_name",
   "zone",
+  "column_break_zsovt",
   "permit_no",
   "keeper_id",
-  "column_break_zsovt",
-  "crush_amount",
-  "commission",
   "posting_date",
   "posting_time",
   "status",
-  "business_unit",
-  "branch_code",
-  "responsibility_center",
   "created_by",
   "owner_fullname",
   "section_break_yzm6y",
   "livestock_kill_sheet",
   "section_break_4lrts",
-  "total_qty",
+  "amount",
   "total_amount",
+  "net_amount",
   "grade",
   "column_break_3lpbc",
+  "total_qty",
   "remarks",
+  "deduction_section",
+  "deductions",
   "amended_from"
  ],
  "fields": [
@@ -99,29 +98,22 @@
    "label": "Zone"
   },
   {
+   "fetch_from": "livestock_loading.keeper_id",
    "fieldname": "keeper_id",
    "fieldtype": "Data",
-   "label": "Keeper ID"
+   "label": "Keeper ID",
+   "reqd": 1
   },
   {
+   "fetch_from": "livestock_loading.permit_no",
    "fieldname": "permit_no",
    "fieldtype": "Data",
-   "label": "Permit No."
+   "label": "Permit No.",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_zsovt",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "crush_amount",
-   "fieldtype": "Currency",
-   "label": "Crush Amount",
-   "precision": "2"
-  },
-  {
-   "fieldname": "commission",
-   "fieldtype": "Currency",
-   "label": "Commission"
   },
   {
    "default": "Today",
@@ -149,21 +141,6 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Open\nClosed"
-  },
-  {
-   "fieldname": "business_unit",
-   "fieldtype": "Data",
-   "label": "Business Unit"
-  },
-  {
-   "fieldname": "branch_code",
-   "fieldtype": "Data",
-   "label": "Branch Code"
-  },
-  {
-   "fieldname": "responsibility_center",
-   "fieldtype": "Data",
-   "label": "Responsibility Center"
   },
   {
    "default": "__user",
@@ -234,7 +211,7 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
-   "label": "Net Amount",
+   "label": "Total Amount",
    "options": "currency",
    "read_only": 1
   },
@@ -243,12 +220,36 @@
    "fieldtype": "Float",
    "label": "Total Weight",
    "read_only": 1
+  },
+  {
+   "fieldname": "deduction_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Deductions"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Meat Commission Charges",
+   "options": "currency"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-02 22:46:00.680980",
+ "modified": "2023-07-08 11:31:06.948331",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Kill Sheet",
