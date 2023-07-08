@@ -38,28 +38,32 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Shape",
-   "options": "Cattle Shape"
+   "options": "Cattle Shape",
+   "reqd": 1
   },
   {
    "fieldname": "cattle_brand",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Cattle Brand",
-   "options": "Cattle Brand"
+   "options": "Cattle Brand",
+   "reqd": 1
   },
   {
    "fieldname": "breed",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Breed",
-   "options": "Cattle Breed"
+   "options": "Cattle Breed",
+   "reqd": 1
   },
   {
    "fieldname": "gender",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Gender",
-   "options": "Cattle Gender"
+   "options": "Cattle Gender",
+   "reqd": 1
   },
   {
    "fieldname": "description",
@@ -81,12 +85,13 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Loading Status",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "reqd": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2023-07-08 12:00:50.968827",
+ "modified": "2023-07-08 12:05:47.305048",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Details",
