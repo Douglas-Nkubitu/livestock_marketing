@@ -15,18 +15,16 @@
   "farmer_number",
   "crush_name",
   "zone",
+  "created_by",
+  "column_break_zsovt",
   "permit_no",
   "keeper_id",
-  "attach_document",
-  "column_break_zsovt",
   "posting_date",
   "posting_time",
   "status",
-  "business_unit",
-  "branch_code",
-  "responsibility_center",
-  "created_by",
   "owner_fullname",
+  "documents_section",
+  "attach_document",
   "section_break_yzm6y",
   "livestock_loading",
   "amended_from"
@@ -61,14 +59,17 @@
    "label": "Farmer ID"
   },
   {
+   "fetch_from": "livestock_registration.keeper_id",
    "fieldname": "keeper_id",
    "fieldtype": "Data",
-   "label": "Keeper ID"
+   "label": "Keeper ID",
+   "reqd": 1
   },
   {
    "fieldname": "permit_no",
    "fieldtype": "Data",
-   "label": "Permit No."
+   "label": "Permit No.",
+   "reqd": 1
   },
   {
    "fetch_from": "farmer_name.crush_name",
@@ -116,21 +117,6 @@
    "options": "Open\nClosed"
   },
   {
-   "fieldname": "business_unit",
-   "fieldtype": "Data",
-   "label": "Business Unit"
-  },
-  {
-   "fieldname": "branch_code",
-   "fieldtype": "Data",
-   "label": "Branch Code"
-  },
-  {
-   "fieldname": "responsibility_center",
-   "fieldtype": "Data",
-   "label": "Responsibility Center"
-  },
-  {
    "default": "__user",
    "fieldname": "created_by",
    "fieldtype": "Link",
@@ -164,8 +150,9 @@
   },
   {
    "fieldname": "attach_document",
-   "fieldtype": "Attach",
-   "label": "Attach Document"
+   "fieldtype": "Table",
+   "label": "Attach Document",
+   "options": "Attach Documents"
   },
   {
    "fetch_from": "created_by.full_name",
@@ -179,6 +166,11 @@
    "label": "Livestock Registration No.",
    "options": "Livestock Registration",
    "reqd": 1
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -190,7 +182,7 @@
    "link_fieldname": "livestock_loading"
   }
  ],
- "modified": "2023-07-06 23:57:18.265974",
+ "modified": "2023-07-08 11:12:02.750401",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",
