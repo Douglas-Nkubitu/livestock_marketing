@@ -33,7 +33,8 @@ frappe.ui.form.on('Kill Sheet', {
         frm.set_query("account", "deductions", () => {
             return {
                 filters: {
-                    root_type: "Income"
+                    root_type: "Income",
+                    is_group: 0
                 }
             }
         });
