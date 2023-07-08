@@ -67,6 +67,16 @@ frappe.ui.form.on('Kill Sheet', {
         // Set the total amount in the field
         frm.set_value('total_amount', totalAmount);
 
+        //Calculate Total Amount
+        var netAmount = frm.doc.total_amount;
+      
+        // Iterate over each row in the child table and subtract the amount
+        frm.doc.livestock_kill_sheet.forEach(function(row) {
+          netAmount -=  frm.doc.amount;
+        });
+        // Set the total amount in the field
+        frm.set_value('net_amount', netAmount);
+
         //Calculate Total Weight
         var totalWeight =0;
          // Iterate over each row in the child table
