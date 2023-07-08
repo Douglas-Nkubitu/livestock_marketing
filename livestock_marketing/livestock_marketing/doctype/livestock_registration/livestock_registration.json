@@ -114,10 +114,11 @@
    "reqd": 1
   },
   {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Approved\nRejected\nCancelled"
+   "options": "Draft\nApproved\nRejected\nCancelled"
   },
   {
    "allow_bulk_edit": 1,
@@ -163,7 +164,7 @@
    "link_fieldname": "livestock_registration"
   }
  ],
- "modified": "2023-07-08 11:00:41.531690",
+ "modified": "2023-07-08 12:19:06.889903",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",
