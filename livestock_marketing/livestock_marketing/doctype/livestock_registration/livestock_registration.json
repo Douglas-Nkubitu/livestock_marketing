@@ -14,17 +14,13 @@
   "farmer_type",
   "farmer_number",
   "crush_name",
+  "created_by",
+  "column_break_zsovt",
   "zone",
   "keeper_id",
-  "loading_status",
-  "column_break_zsovt",
   "posting_date",
   "posting_time",
   "status",
-  "business_unit",
-  "branch_code",
-  "responsibility_center",
-  "created_by",
   "owner_fullname",
   "section_break_yzm6y",
   "livestock_details",
@@ -74,12 +70,14 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Zone"
+   "label": "Zone",
+   "reqd": 1
   },
   {
    "fieldname": "keeper_id",
    "fieldtype": "Data",
-   "label": "Keeper ID"
+   "label": "Keeper ID",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_zsovt",
@@ -122,21 +120,6 @@
    "options": "Approved\nRejected\nCancelled"
   },
   {
-   "fieldname": "business_unit",
-   "fieldtype": "Data",
-   "label": "Business Unit"
-  },
-  {
-   "fieldname": "branch_code",
-   "fieldtype": "Data",
-   "label": "Branch Code"
-  },
-  {
-   "fieldname": "responsibility_center",
-   "fieldtype": "Data",
-   "label": "Responsibility Center"
-  },
-  {
    "allow_bulk_edit": 1,
    "bold": 1,
    "fieldname": "livestock_details",
@@ -165,12 +148,6 @@
    "label": "Livestock Registration"
   },
   {
-   "fieldname": "loading_status",
-   "fieldtype": "Select",
-   "label": "Loading Status",
-   "options": "Yes\nNo"
-  },
-  {
    "fetch_from": "created_by.full_name",
    "fieldname": "owner_fullname",
    "fieldtype": "Data",
@@ -186,7 +163,7 @@
    "link_fieldname": "livestock_registration"
   }
  ],
- "modified": "2023-07-07 00:01:23.577817",
+ "modified": "2023-07-08 11:00:41.531690",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",
