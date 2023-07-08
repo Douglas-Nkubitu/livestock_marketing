@@ -27,6 +27,20 @@ frappe.ui.form.on('Kill Sheet', {
 	},
 })
 
+//filter income accounts only
+frappe.ui.form.on('Kill Sheet', {
+    refresh: (frm) => {
+        frm.set_query("account", "deductions", () => {
+            return {
+                filters: {
+                    root_type: "Income"
+                }
+            }
+        });
+    }
+})
+
+// set posting time
 frappe.ui.form.on('Kill Sheet', {
 	refresh: function(frm) {
         if (frm.is_new()) {
@@ -108,3 +122,28 @@ frappe.ui.form.on("Livestock Kill sheet", "rate", function (frm, cdt, cdn) {
     //amount on cost change
     amount_calculation(frm, cdt, cdn);
 })
+
+// calculate total deductions
+frappe.ui.form.on('Kill Sheet', {
+    validate: function(frm, cdt, cdn) {
+        // Set the total amount in the field
+        var totalDeductions = 0;
+        // Iterate over each row in the deductions child table
+        frm.doc.deductions.forEach(function(row) {
+          totalDeductions += row.amount;
+        });
+      
+        // Set the total deductions in the field
+        frm.set_value('total_deductions', totalDeductions);
+        
+        // Set the total amount payable to farmer
+        var netAmount = frm.doc.net_amount || 0;
+        var totalDeductions = frm.doc.total_deductions || 0;
+        var totalPayable = netAmount - totalDeductions;
+      
+        // Set the total payable in the parent document field
+        frm.set_value('total_amount_payable', totalPayable);
+    }
+});
+
+  
