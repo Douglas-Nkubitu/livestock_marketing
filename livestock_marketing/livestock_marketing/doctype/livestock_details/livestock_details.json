@@ -10,6 +10,7 @@
   "national_ear_tag",
   "ear_tag",
   "shape",
+  "loading_status",
   "column_break_7ifb0",
   "cattle_brand",
   "breed",
@@ -73,11 +74,18 @@
   {
    "fieldname": "section_break_ikic6",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "No",
+   "fieldname": "loading_status",
+   "fieldtype": "Select",
+   "label": "Loading Status",
+   "options": "Yes\nNo"
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2023-06-29 21:28:33.991835",
+ "modified": "2023-07-08 11:07:35.328518",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Details",
