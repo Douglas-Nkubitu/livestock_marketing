@@ -10,7 +10,7 @@
  "icon": "project-2",
  "idx": 0,
  "is_hidden": 0,
- "label": "Livestock Marketing",
+ "label": "Livestock",
  "links": [
   {
    "hidden": 0,
@@ -129,10 +129,10 @@
    "type": "Link"
   }
  ],
- "modified": "2023-07-08 11:40:47.482721",
+ "modified": "2023-07-09 19:54:32.086063",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
- "name": "Livestock Marketing",
+ "name": "Livestock",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -170,5 +170,5 @@
    "type": "DocType"
   }
  ],
- "title": "Livestock Marketing"
+ "title": "Livestock"
 }
