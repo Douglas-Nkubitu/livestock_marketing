@@ -2,47 +2,6 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Livestock Kill Sheet', {
-    refresh: function(frm){
-        if (frm.doc.docstatus === 1) {
-			frm.add_custom_button(__('Payment'),
-				function () {
-					frm.events.make_payment_entry(frm);
-				}, __('Create'));
-		}
-    },
-    make_payment_entry: function(frm) {
-		let method = "livestock_marketing.overrides.customer_payment_entry.get_payment_entry_for_customer";
-	
-		return frappe.call({
-			method: method,
-			args: {
-				"dt": frm.doc.doctype,
-				"dn": frm.doc.name
-			},
-			callback: function(r) {
-				var doclist = frappe.model.sync(r.message);
-				frappe.set_route("Form", doclist[0].doctype, doclist[0].name);
-			}
-		});
-	},
-})
-
-//filter income accounts only
-frappe.ui.form.on('Livestock Kill Sheet', {
-    refresh: (frm) => {
-        frm.set_query("account", "deductions", () => {
-            return {
-                filters: {
-                    root_type: "Income",
-                    is_group: 0
-                }
-            }
-        });
-    }
-})
-
-// set posting time
-frappe.ui.form.on('Livestock Kill Sheet', {
 	refresh: function(frm) {
         if (frm.is_new()) {
             frm.set_value('posting_time', frappe.datetime.now_time());
@@ -145,4 +104,16 @@ frappe.ui.form.on('Livestock Kill Sheet', {
     }
 });
 
-  
+//filter income accounts only
+frappe.ui.form.on('Livestock Kill Sheet', {
+    refresh: (frm) => {
+        frm.set_query("account", "deductions", () => {
+            return {
+                filters: {
+                    root_type: "Income",
+                    is_group: 0
+                }
+            }
+        });
+    }
+})
