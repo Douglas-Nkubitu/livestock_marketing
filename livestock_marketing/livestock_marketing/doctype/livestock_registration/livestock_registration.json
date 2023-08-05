@@ -126,7 +126,7 @@
    "fieldname": "livestock_details",
    "fieldtype": "Table",
    "label": "Livestock Registration Lines",
-   "options": "Livestock Details",
+   "options": "Livestock Registration Details",
    "reqd": 1
   },
   {
@@ -164,7 +164,7 @@
    "link_fieldname": "livestock_registration"
   }
  ],
- "modified": "2023-07-08 12:19:06.889903",
+ "modified": "2023-08-05 14:31:44.993818",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Registration",

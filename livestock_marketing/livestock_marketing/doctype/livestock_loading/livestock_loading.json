@@ -128,15 +128,15 @@
   {
    "fieldname": "section_break_yzm6y",
    "fieldtype": "Section Break",
-   "label": "Livestock Details"
+   "label": "Livestock Loading Details"
   },
   {
    "allow_bulk_edit": 1,
    "bold": 1,
    "fieldname": "livestock_loading",
    "fieldtype": "Table",
-   "label": "Livestock Loading",
-   "options": "LiveStock Loading Sheet",
+   "label": "Livestock Loading Details",
+   "options": "Livestock Loading Sheet Details",
    "reqd": 1
   },
   {
@@ -152,7 +152,7 @@
    "fieldname": "attach_document",
    "fieldtype": "Table",
    "label": "Attach Document",
-   "options": "Attach Documents"
+   "options": "Livestock Kill Sheet Attachments"
   },
   {
    "fetch_from": "created_by.full_name",
@@ -178,11 +178,11 @@
  "links": [
   {
    "group": "Livestock Kill Sheet",
-   "link_doctype": "Kill Sheet",
+   "link_doctype": "Livestock Kill Sheet",
    "link_fieldname": "livestock_loading"
   }
  ],
- "modified": "2023-07-08 11:12:02.750401",
+ "modified": "2023-08-05 14:46:05.290252",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",

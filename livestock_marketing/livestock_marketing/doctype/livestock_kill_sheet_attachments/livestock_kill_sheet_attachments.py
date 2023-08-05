@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class LiveStockLoadingSheet(Document):
+class LivestockKillSheetAttachments(Document):
 	pass
