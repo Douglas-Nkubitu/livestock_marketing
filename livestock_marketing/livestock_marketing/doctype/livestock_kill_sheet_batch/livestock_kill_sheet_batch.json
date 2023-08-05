@@ -29,7 +29,6 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "options": "LKSB-.YYYY.-",
    "reqd": 1
@@ -99,12 +98,14 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date",
    "reqd": 1
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date",
    "reqd": 1
   },
@@ -125,7 +126,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-05 16:02:17.043670",
+ "modified": "2023-08-05 17:40:06.557782",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill Sheet Batch",
