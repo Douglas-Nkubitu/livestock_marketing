@@ -2,6 +2,17 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Livestock Kill Sheet Batch', {
+    //selecting and adding livestock kill sheet in child table
+    get_livestock_kill_sheet: function (frm) {
+		frappe.call({
+			method: "get_submitted_livestock_kill_sheet",
+			doc: frm.doc,
+			callback: function (r) {
+				refresh_field("livestock_kill_sheet_batch");
+			}
+		});
+	},
+
 	//Calculate total Amount
     validate: function (frm) {
         //Calculate Net Amount
@@ -29,6 +40,6 @@ frappe.ui.form.on('Livestock Kill Sheet Batch', {
 		totalPayable += row.total_amount_payable;
         })
         // Set the total payable in the field
-        frm.set_value('total_amount_payable', totalPayable)
+        frm.set_value('total_amount_payable', totalPayable);
 	}
 });
