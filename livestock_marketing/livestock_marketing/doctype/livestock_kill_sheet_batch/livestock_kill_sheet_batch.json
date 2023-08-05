@@ -18,11 +18,11 @@
   "get_livestock_kill_sheet",
   "livestock_kill_sheet_batch",
   "section_break_m3gvc",
-  "net_amount",
+  "amount",
   "column_break_nfy7z",
-  "total_deductions",
+  "deductions",
   "column_break_3neog",
-  "total_amount_payable",
+  "amount_payable",
   "amended_from"
  ],
  "fields": [
@@ -46,33 +46,12 @@
    "label": "Total Amounts"
   },
   {
-   "fieldname": "net_amount",
-   "fieldtype": "Currency",
-   "label": "Net Amount",
-   "options": "currency",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_nfy7z",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "total_deductions",
-   "fieldtype": "Currency",
-   "label": "Total Deductions",
-   "options": "currency",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_3neog",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_amount_payable",
-   "fieldtype": "Currency",
-   "label": "Total Amount Payable",
-   "options": "currency",
-   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -121,12 +100,33 @@
    "fieldname": "get_livestock_kill_sheet",
    "fieldtype": "Button",
    "label": "Get All Kill Sheet"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_payable",
+   "fieldtype": "Currency",
+   "label": "Total Amount Payable",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-05 17:40:06.557782",
+ "modified": "2023-08-05 23:00:38.607120",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill Sheet Batch",
