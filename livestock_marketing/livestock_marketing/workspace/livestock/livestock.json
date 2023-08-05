@@ -84,7 +84,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Livestock",
-   "link_count": 4,
+   "link_count": 5,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -127,9 +127,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Kill Sheet Batch",
+   "link_count": 0,
+   "link_to": "Livestock Kill Sheet Batch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-08-05 15:20:55.309987",
+ "modified": "2023-08-05 15:34:29.946015",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock",
