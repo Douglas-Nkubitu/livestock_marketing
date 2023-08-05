@@ -15,54 +15,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Livestock",
-   "link_count": 4,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Farmer Registration",
-   "link_count": 0,
-   "link_to": "Customer",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Livestock Registration",
-   "link_count": 0,
-   "link_to": "Livestock Registration",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Livestock Loading",
-   "link_count": 0,
-   "link_to": "Livestock Loading",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Livestock Kill sheet",
-   "link_count": 0,
-   "link_to": "Kill Sheet",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Setup",
    "link_count": 6,
    "onboard": 0,
@@ -127,9 +79,57 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Farmer Registration",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Registration",
+   "link_count": 0,
+   "link_to": "Livestock Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Loading",
+   "link_count": 0,
+   "link_to": "Livestock Loading",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Livestock Kill Sheet",
+   "link_count": 0,
+   "link_to": "Livestock Kill Sheet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-07-09 19:54:32.086063",
+ "modified": "2023-08-05 15:20:55.309987",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock",
@@ -145,7 +145,7 @@
    "color": "Grey",
    "doc_view": "List",
    "label": "Livestock Kill Sheet",
-   "link_to": "Kill Sheet",
+   "link_to": "Livestock Kill Sheet",
    "type": "DocType"
   },
   {
