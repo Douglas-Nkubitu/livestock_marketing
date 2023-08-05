@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-05 15:22:42.816217",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "livestock_kill_sheet_section",
+  "naming_series",
+  "livestock_kill_sheet_batch"
+ ],
+ "fields": [
+  {
+   "fieldname": "livestock_kill_sheet_section",
+   "fieldtype": "Section Break",
+   "label": "Batch Kill Sheet"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "LKSB-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "livestock_kill_sheet_batch",
+   "fieldtype": "Table",
+   "label": "Livestock Kill Sheet Batch",
+   "options": "Livestock Kill Sheet Batch Details",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-05 15:29:38.083871",
+ "modified_by": "Administrator",
+ "module": "Livestock Marketing",
+ "name": "Livestock Kill Sheet Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
