@@ -8,16 +8,24 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "livestock_kill_sheet_section",
   "naming_series",
-  "livestock_kill_sheet_batch"
+  "posting_date",
+  "livestock_kill_sheet_filters_section",
+  "from_date",
+  "column_break_9yx9j",
+  "to_date",
+  "section_break_vglff",
+  "get_livestock_kill_sheet",
+  "livestock_kill_sheet_batch",
+  "section_break_m3gvc",
+  "net_amount",
+  "column_break_nfy7z",
+  "total_deductions",
+  "column_break_3neog",
+  "total_amount_payable",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "livestock_kill_sheet_section",
-   "fieldtype": "Section Break",
-   "label": "Batch Kill Sheet"
-  },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
@@ -32,12 +40,92 @@
    "label": "Livestock Kill Sheet Batch",
    "options": "Livestock Kill Sheet Batch Details",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_m3gvc",
+   "fieldtype": "Section Break",
+   "label": "Total Amounts"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nfy7z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3neog",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount_payable",
+   "fieldtype": "Currency",
+   "label": "Total Amount Payable",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Livestock Kill Sheet Batch",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "livestock_kill_sheet_filters_section",
+   "fieldtype": "Section Break",
+   "label": "Livestock Kill Sheet Filters"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9yx9j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vglff",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_livestock_kill_sheet",
+   "fieldtype": "Button",
+   "label": "Get All Kill Sheet"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-05 15:29:38.083871",
+ "modified": "2023-08-05 16:02:17.043670",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill Sheet Batch",
