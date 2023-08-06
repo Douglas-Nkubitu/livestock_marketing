@@ -1,29 +1,29 @@
 // Copyright (c) 2023, Douglas Nkubitu and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Livestock Kill Sheet Batch', {
-    refresh: function(frm) {
-        if (frm.doc.docstatus === 1) {
-            frm.add_custom_button(__('Create Journal Entry'), function() {
-                frm.events.create_journal_entry_from_js(frm);
-            }, __('Create Journal Entry'));
-        }
-    },
-    create_journal_entry_from_js: function(frm) {
-        frappe.call({
-            method: 'livestock_marketing.livestock_marketing.doctype.livestock_kill_sheet_batch.livestock_kill_sheet_batch.create_journal_entry',
-            args: {
-                kill_sheet_batch: frm.doc.name
-            },
-            callback: function(response) {
-                // Optional: Handle the response or show a message
-                frappe.msgprint('Journal Entry created successfully!');
-                // Optional: Refresh the form to update the Journal Entry link field
-                frm.reload_doc();
-            }
-        });
-    }
-});
+// frappe.ui.form.on('Livestock Kill Sheet Batch', {
+//     refresh: function(frm) {
+//         if (frm.doc.docstatus === 1) {
+//             frm.add_custom_button(__('Create Journal Entry'), function() {
+//                 frm.events.create_journal_entry_from_js(frm);
+//             }, __('Create Journal Entry'));
+//         }
+//     },
+//     create_journal_entry_from_js: function(frm) {
+//         frappe.call({
+//             method: 'livestock_marketing.livestock_marketing.doctype.livestock_kill_sheet_batch.livestock_kill_sheet_batch.create_journal_entry',
+//             args: {
+//                 kill_sheet_batch: frm.doc.name
+//             },
+//             callback: function(response) {
+//                 // Optional: Handle the response or show a message
+//                 frappe.msgprint('Journal Entry created successfully!');
+//                 // Optional: Refresh the form to update the Journal Entry link field
+//                 frm.reload_doc();
+//             }
+//         });
+//     }
+// });
 
 frappe.ui.form.on('Livestock Kill Sheet Batch', {
     //selecting and adding livestock kill sheet in child table
