@@ -35,6 +35,7 @@ class LivestockKillSheetBatch(Document):
 		for data in submitted_livestock_kill_sheet:
 			self.append('livestock_kill_sheet_batch', {
 				'livestock_kill_sheet': data.name,
+				'farmer': data.farmer,
 				'farmer_name': data.farmer_name,
 				'net_amount': data.net_amount,
 				'total_deductions':data.total_deductions,
@@ -67,7 +68,7 @@ def get_livestock_kill_sheet(self):
         params["to_date"] = self.to_date
 
     submitted_livestock_kill_sheet = frappe.db.sql("""
-        SELECT DISTINCT lks.name, lks.farmer_name, lks.posting_date, lks.amount, lks.net_amount, lks.total_deductions, lks.total_amount_payable
+        SELECT DISTINCT lks.name, lks.farmer, lks.farmer_name, lks.posting_date, lks.amount, lks.net_amount, lks.total_deductions, lks.total_amount_payable
         FROM `tabLivestock Kill Sheet` lks
         WHERE lks.docstatus = 1
         AND (
@@ -110,13 +111,13 @@ def create_journal_entry(kill_sheet_batch):
 	# Append the "Cash - S" account row to the Journal Entry
 	journal_entry.append("accounts", cash_account_row)
 	for child_record in child_records.get("livestock_kill_sheet_batch"):
-		farmer_name = child_record.farmer_name
+		farmer_name = child_record.farmer
 		total_amount_payable = child_record.total_amount_payable
 
 		# Create a new Journal Entry account row for "Debtors - S" linked to the farmer
 		debtor_account_row = frappe.new_doc("Journal Entry Account")
 		debtor_account_row.account = "Debtors - S"  # Replace with the appropriate account name
-		debtor_account_row.party_type = "Customer"
+		debtor_account_row.party_type = "Member"
 		debtor_account_row.party = farmer_name
 		debtor_account_row.user_remark = f"Journal Entry created from {parent_docname}"
 		debtor_account_row.debit_in_account_currency = total_amount_payable
