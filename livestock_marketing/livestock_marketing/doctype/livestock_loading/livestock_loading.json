@@ -11,6 +11,7 @@
   "livestock_loading_section",
   "naming_series",
   "livestock_registration",
+  "farmer",
   "farmer_name",
   "farmer_number",
   "crush_name",
@@ -45,15 +46,11 @@
   {
    "fetch_from": "livestock_registration.farmer_name",
    "fieldname": "farmer_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Farmer Name",
-   "options": "Customer",
-   "reqd": 1
+   "fieldtype": "Data",
+   "label": "Farmer Name"
   },
   {
-   "fetch_from": "farmer_name.farmer_id",
+   "fetch_from": "livestock_registration.farmer_number",
    "fieldname": "farmer_number",
    "fieldtype": "Data",
    "label": "Farmer ID"
@@ -72,13 +69,13 @@
    "reqd": 1
   },
   {
-   "fetch_from": "farmer_name.crush_name",
+   "fetch_from": "livestock_registration.crush_name",
    "fieldname": "crush_name",
    "fieldtype": "Data",
    "label": "Crush Name"
   },
   {
-   "fetch_from": "farmer_name.zone",
+   "fetch_from": "livestock_registration.zone",
    "fieldname": "zone",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -152,7 +149,7 @@
    "fieldname": "attach_document",
    "fieldtype": "Table",
    "label": "Attach Document",
-   "options": "Livestock Kill Sheet Attachments"
+   "options": "Livestock Loading Attachments"
   },
   {
    "fetch_from": "created_by.full_name",
@@ -171,6 +168,14 @@
    "fieldname": "documents_section",
    "fieldtype": "Section Break",
    "label": "Documents"
+  },
+  {
+   "fetch_from": "livestock_registration.farmer",
+   "fieldname": "farmer",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Farmer",
+   "options": "Member"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -182,7 +187,7 @@
    "link_fieldname": "livestock_loading"
   }
  ],
- "modified": "2023-08-05 14:46:05.290252",
+ "modified": "2023-08-11 21:20:40.908599",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Loading",

@@ -11,8 +11,8 @@
   "livestock_kill_sheet_section",
   "naming_series",
   "livestock_loading",
+  "farmer",
   "farmer_name",
-  "farmer_type",
   "farmer_number",
   "mobile_number",
   "crush_name",
@@ -56,34 +56,20 @@
    "reqd": 1
   },
   {
-   "fetch_from": "livestock_loading.farmer_name",
+   "fetch_from": "farmer.member_name",
    "fieldname": "farmer_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Farmer Name",
-   "options": "Customer",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "farmer_name.customer_categories",
-   "fieldname": "farmer_type",
    "fieldtype": "Data",
-   "label": "Farmer Type"
+   "in_list_view": 1,
+   "label": "Farmer Name"
   },
   {
-   "fetch_from": "farmer_name.farmer_id",
+   "fetch_from": "farmer.farmer_id",
    "fieldname": "farmer_number",
    "fieldtype": "Data",
    "label": "Farmer ID"
   },
   {
-   "fetch_from": "farmer_name.mobile_no",
-   "fieldname": "mobile_number",
-   "fieldtype": "Int",
-   "label": "Mobile Number"
-  },
-  {
-   "fetch_from": "farmer_name.crush_name",
+   "fetch_from": "farmer.crush_name",
    "fieldname": "crush_name",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -92,7 +78,7 @@
    "label": "Crush Name"
   },
   {
-   "fetch_from": "farmer_name.zone",
+   "fetch_from": "farmer.zone",
    "fieldname": "zone",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -266,12 +252,26 @@
    "label": "Livestock Kill Sheet Lines",
    "options": "Livestock Kill Sheet Details",
    "reqd": 1
+  },
+  {
+   "fetch_from": "farmer.mobile_number",
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fetch_from": "livestock_loading.farmer",
+   "fieldname": "farmer",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Farmer",
+   "options": "Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-11 15:48:02.997987",
+ "modified": "2023-08-11 21:22:28.949784",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill Sheet",
