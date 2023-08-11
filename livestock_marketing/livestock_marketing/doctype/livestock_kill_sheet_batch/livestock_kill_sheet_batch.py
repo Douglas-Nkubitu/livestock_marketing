@@ -91,6 +91,20 @@ def create_journal_entry(kill_sheet_batch):
 	# Retrieve child table records from "Livestock Kill Sheet Batch Details"
 	child_records = frappe.get_doc("Livestock Kill Sheet Batch", kill_sheet_batch)
 
+	# Iterate through the child table records to check for existing journal entries
+	for child_record in child_records.get("livestock_kill_sheet_batch"):
+		farmer_name = child_record.farmer
+		total_amount_payable = child_record.total_amount_payable
+
+		existing_journal_entry = frappe.get_all("Journal Entry Account",
+												filters={"party": farmer_name},
+												fields=["parent"])
+		
+		if existing_journal_entry:
+			journal_entry_name = existing_journal_entry[0]['parent']
+			frappe.throw(f"A Journal Entry is already created for Kill Sheet Batch {kill_sheet_batch}. "
+                         f"Journal Entry: {journal_entry_name}")
+
 	# Calculate the total_amount_payable from debtors
 	total_amount = sum(child_record.total_amount_payable for child_record in child_records.get("livestock_kill_sheet_batch"))
 
@@ -110,28 +124,24 @@ def create_journal_entry(kill_sheet_batch):
 	cash_account_row.credit_in_account_currency = total_amount
 
 	# Append the "Cash - S" account row to the Journal Entry
-	journal_entry.append("accounts", cash_account_row)
-	for child_record in child_records.get("livestock_kill_sheet_batch"):
-		farmer_name = child_record.farmer
-		total_amount_payable = child_record.total_amount_payable
+	journal_entry.append("accounts", cash_account_row)	
+	# Fetch account from "Member" doctype using farmer_name
+	member = frappe.get_doc("Member", farmer_name)
+	for debtor in member.get("accounts"):
+		debtor_account = debtor.account
 
-		# Fetch debtor.account from "Member" doctype using farmer_name
-		member = frappe.get_doc("Member", farmer_name)
-		for debtor in member.get("accounts"):
-			debtor_account = debtor.account
+	# Create a new Journal Entry account row for "Debtors - S" linked to the farmer
+	debtor_account_row = frappe.new_doc("Journal Entry Account")
+	debtor_account_row.account = debtor_account
+	debtor_account_row.party_type = "Member"
+	debtor_account_row.party = farmer_name
+	debtor_account_row.user_remark = f"Journal Entry created from {parent_docname}"
+	debtor_account_row.debit_in_account_currency = total_amount_payable
 
-		# Create a new Journal Entry account row for "Debtors - S" linked to the farmer
-		debtor_account_row = frappe.new_doc("Journal Entry Account")
-		debtor_account_row.account = debtor_account
-		debtor_account_row.party_type = "Member"
-		debtor_account_row.party = farmer_name
-		debtor_account_row.user_remark = f"Journal Entry created from {parent_docname}"
-		debtor_account_row.debit_in_account_currency = total_amount_payable
+	journal_entry.append("accounts", debtor_account_row)
 
-		journal_entry.append("accounts", debtor_account_row)
-
-		# # Print the data before creating the Journal Entry (optional)
-		# frappe.msgprint(f"Farmer Name: {farmer_name}, Total Amount Payable: {total_amount_payable}")
+	# # Print the data before creating the Journal Entry (optional)
+	# frappe.msgprint(f"Farmer Name: {farmer_name}, Total Amount Payable: {total_amount_payable}")
 
 	journal_entry.cheque_no = ""  
 	journal_entry.cheque_date = ""
