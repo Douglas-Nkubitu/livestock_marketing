@@ -37,6 +37,15 @@ frappe.ui.form.on('Livestock Kill Sheet Batch', {
 
 	//Calculate total Amount
     validate: function (frm) {
+        //Calculate Commission Amount
+        var commissionAmount = 0;
+        // Iterate over each row in the child table
+        frm.doc.livestock_kill_sheet_batch.forEach(function(row){
+         commissionAmount += row.commission_amount;
+        })
+        //set the commission amount in the field
+        frm.set_value('commission', commissionAmount)
+
         //Calculate Net Amount
         var netAmount = 0;
         // Iterate over each row in the child table
