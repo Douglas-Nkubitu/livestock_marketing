@@ -7,6 +7,8 @@ app_description = "Livestock Marketing System"
 app_email = "nkubitudouglas@gmail.com"
 app_license = "MIT"
 
+required_apps = ["non_profit"]
+
 # Includes in <head>
 # ------------------
 
