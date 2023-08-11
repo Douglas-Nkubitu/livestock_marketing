@@ -18,6 +18,8 @@
   "get_livestock_kill_sheet",
   "livestock_kill_sheet_batch",
   "section_break_m3gvc",
+  "commission",
+  "column_break_u677x",
   "amount",
   "column_break_nfy7z",
   "deductions",
@@ -121,6 +123,17 @@
    "label": "Total Amount Payable",
    "options": "currency",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_u677x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -132,7 +145,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2023-08-06 20:17:26.607381",
+ "modified": "2023-08-11 16:06:11.115484",
  "modified_by": "Administrator",
  "module": "Livestock Marketing",
  "name": "Livestock Kill Sheet Batch",
