@@ -3,7 +3,14 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 def execute():
     fields={
-        "Customer": [
+        "Member": [
+            {
+                "label":"Mobile Number",
+                "fieldname":"mobile_number",
+                "fieldtype":"Data",
+                "insert_after":"membership_type",
+                "reqd": 1,
+            },
             {
                 "label":"Member Details",
                 "fieldname":"members_details",
@@ -11,8 +18,8 @@ def execute():
                 "fieldtype":"Section Break",
             },
             {
-                "label":"Customer Categories",
-                "fieldname":"customer_categories",
+                "label":"Member Categories",
+                "fieldname":"member_categories",
                 "fieldtype":"Select",
                 "options": "\nMember\nNon Member",
                 "insert_after":"members_details",
@@ -21,7 +28,7 @@ def execute():
             {
                 "label":"Crush Name",
                 "fieldname":"crush_name",
-                "insert_after":"customer_categories",
+                "insert_after":"member_categories",
                 "fieldtype":"Link",
                 "options":"Crush Name",
                 "reqd": 1,
@@ -58,6 +65,20 @@ def execute():
                 "fieldname":"attach_national_id",
                 "insert_after":"attach_farmer_id",
                 "fieldtype":"Attach",
+                "reqd": 1,
+            },
+            {
+                "label":"Member Account",
+                "fieldname":"member_account",
+                "insert_after":"attach_national_id",
+                "fieldtype":"Section Break",
+            },
+            {
+                "label":"Receivable Accounts",
+                "fieldname":"accounts",
+                "insert_after":"member_account",
+                "fieldtype":"Table",
+                "options":"Party Account",
                 "reqd": 1,
             }
         ],
