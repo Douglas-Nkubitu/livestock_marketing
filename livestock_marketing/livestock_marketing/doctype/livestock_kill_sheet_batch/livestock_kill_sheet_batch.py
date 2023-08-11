@@ -94,7 +94,7 @@ def create_journal_entry(kill_sheet_batch):
 	# Calculate the total_amount_payable from debtors
 	total_amount = sum(child_record.total_amount_payable for child_record in child_records.get("livestock_kill_sheet_batch"))
 
-	# Store the parent_docname for later use
+	# parent_docname
 	parent_docname = child_records.name
 
 	# Create a new Journal Entry
@@ -103,9 +103,10 @@ def create_journal_entry(kill_sheet_batch):
 	journal_entry.posting_date = frappe.utils.today()
 	journal_entry.company = frappe.defaults.get_defaults().get("company")
 
-	# Create a new Journal Entry account row for "Cash - S"
+	# Fetch the default cash account from the chart of accounts
+	default_cash_account = frappe.get_value("Company", journal_entry.company, "default_cash_account")
 	cash_account_row = frappe.new_doc("Journal Entry Account")
-	cash_account_row.account = "Cash - S"  # Replace with the appropriate account name
+	cash_account_row.account = default_cash_account  # Assign the default cash account
 	cash_account_row.credit_in_account_currency = total_amount
 
 	# Append the "Cash - S" account row to the Journal Entry
@@ -114,15 +115,19 @@ def create_journal_entry(kill_sheet_batch):
 		farmer_name = child_record.farmer
 		total_amount_payable = child_record.total_amount_payable
 
+		# Fetch debtor.account from "Member" doctype using farmer_name
+		member = frappe.get_doc("Member", farmer_name)
+		for debtor in member.get("accounts"):
+			debtor_account = debtor.account
+
 		# Create a new Journal Entry account row for "Debtors - S" linked to the farmer
 		debtor_account_row = frappe.new_doc("Journal Entry Account")
-		debtor_account_row.account = "Debtors - S"  # Replace with the appropriate account name
+		debtor_account_row.account = debtor_account
 		debtor_account_row.party_type = "Member"
 		debtor_account_row.party = farmer_name
 		debtor_account_row.user_remark = f"Journal Entry created from {parent_docname}"
 		debtor_account_row.debit_in_account_currency = total_amount_payable
 
-		# Append the "Debtors - S" account row to the Journal Entry
 		journal_entry.append("accounts", debtor_account_row)
 
 		# # Print the data before creating the Journal Entry (optional)
