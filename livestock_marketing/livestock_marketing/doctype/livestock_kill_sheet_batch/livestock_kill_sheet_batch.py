@@ -38,7 +38,8 @@ class LivestockKillSheetBatch(Document):
 				'farmer_name': data.farmer_name,
 				'net_amount': data.net_amount,
 				'total_deductions':data.total_deductions,
-				'total_amount_payable': data.total_amount_payable                       
+				'total_amount_payable': data.total_amount_payable,
+				'commission_amount': data.amount                       
 			})
 
 	# Get Items
@@ -66,7 +67,7 @@ def get_livestock_kill_sheet(self):
         params["to_date"] = self.to_date
 
     submitted_livestock_kill_sheet = frappe.db.sql("""
-        SELECT DISTINCT lks.name, lks.farmer_name, lks.posting_date, lks.net_amount, lks.total_deductions, lks.total_amount_payable
+        SELECT DISTINCT lks.name, lks.farmer_name, lks.posting_date, lks.amount, lks.net_amount, lks.total_deductions, lks.total_amount_payable
         FROM `tabLivestock Kill Sheet` lks
         WHERE lks.docstatus = 1
         AND (
