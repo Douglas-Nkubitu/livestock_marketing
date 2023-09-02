@@ -3,7 +3,7 @@ frappe.ui.form.on("Member", {
         frm.set_query('account', 'accounts', function(doc, cdt, cdn) {
             var d  = locals[cdt][cdn];
             var filters = {
-                'account_type': 'Receivable',
+                'account_type': 'Payable',
                 'company': d.company,
                 "is_group": 0
             };
